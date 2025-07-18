@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Michroma&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap");
+
+/* Base styles */
+.navbar-container {
+  background-color: #009688;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 99%;
+  height: 15%;
+  z-index: 999;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 40px 20px;
+  flex-wrap: wrap;
+}
+.navbar-menu {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.link {
+  color: #f0e68c; /* Default text color */
+  text-decoration: none; /* Removes underline */
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+/* Change color on hover */
+.link:hover {
+  color: black;
+  text-decoration: underline;
+}
+/* Optional: active link style */
+.link:active {
+  color: #2e8b57;
+}
