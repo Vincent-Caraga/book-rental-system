@@ -2,14 +2,91 @@
 
 /* Base styles */
 .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #009688;
+  color: #f0e68c;
+  flex-wrap: wrap; /*Allows items to wrap if space is limited*/
+}
+.navbar-toggler {
+  display: block; /*Show hamburger on mobilr*/
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 1001; /*Ensure it's above the menu when open*/
+}
+.toggler-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-menu {
+  display: none; /*Hide navigation links by default on mobile*/
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #009688;
+  position: absolute;
+  top: 100px; /*Adjust based on your navbar height*/
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.navbar-menu.active {
+  display: block; /*Show menu when active (toggled)*/
+}
+.nav-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-item:last-child {
+  border-bottom: none;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block; /*Make the whole area clickable*/
+  padding: 5px 0;
+}
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/*Media Query for Larger Screens*/
+@media (min-width: 768px) {
+  .navbar-container {
+    justify-content: flex-start; /*Align items to the start on larger screens*/
+  }
+  .navbar-toggler {
+    display: none; /*Hide hamburger on larger screens */
+  }
+}
+
+/*
+.navbar-container {
   background-color: #009688;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 99%;
-  height: 15%;
+  height: 10%;
   z-index: 999;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap; /*Allows items to wrap if space is limited*/
+
+/*
 .navbar-menu {
   list-style: none;
   display: flex;
@@ -20,14 +97,15 @@
   text-align: center;
   margin: 40px 20px;
   flex-wrap: wrap;
-}
+}*/
+/*
 .navbar-menu {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
   cursor: pointer;
-}
+}*/
 .link {
   color: #f0e68c; /* Default text color */
   text-decoration: none; /* Removes underline */

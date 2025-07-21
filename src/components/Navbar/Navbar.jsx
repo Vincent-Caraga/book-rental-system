@@ -5,23 +5,28 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar-container">
+      <button className="navbar-toggler" aria-label="Toggle navigation">
+        <span className="toggler-icon"></span>
+        <span className="toggler-icon"></span>
+        <span className="toggler-icon"></span>
+      </button>
       <ul className="navbar-menu">
-        <li>
+        <li className="nav-item">
           <Link className="link" to="/">
             HOME
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link className="link" to="/view">
             VIEW BOOKS
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link className="link" to="/rent">
             RENT A BOOK
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link className="link" to="signup">
             SIGN UP
           </Link>
