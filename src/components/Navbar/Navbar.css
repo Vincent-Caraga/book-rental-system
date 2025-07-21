@@ -69,6 +69,29 @@
   .navbar-toggler {
     display: none; /*Hide hamburger on larger screens */
   }
+  .navbar-menu {
+    display: flex; /*Show navigation links as a flex row*/
+    width: auto; /*Revert width to auto*/
+    position: static; /*Remove absolute positioning*/
+    background-color: transparent; /*Transparent background*/
+    margin-left: auto; /*Push nav to the right*/
+  }
+  .nav-item {
+    border-bottom: none;
+    padding: 0 15px; /*Adjust spacing for desktop*/
+  }
+  .link {
+    padding: 0; /*Reset padding*/
+  }
+  .navbar-toggler.open .toggler-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-toggler.open .toggler-icon:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-toggler.open .toggler-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 /*
